@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SEOUL JINDOS - 디스코드 챗봇 안내</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#242021] text-white min-h-screen">
+    <div class="max-w-3xl mx-auto px-6 py-12 text-center">
+      <img src="jindori.png" alt="JINDORI 로고" class="mx-auto w-40 mb-6" />
+      <h1 class="text-4xl font-bold text-[#efa31a] mb-2">Jindori 챗봇 사용법</h1>
+      <p class="text-gray-300 mb-8">우리 팀 전용 디스코드 봇의 주요 기능과 명령어를 확인해보세요!</p>
+
+      <div class="bg-[#121010] rounded-xl p-6 text-left space-y-4 leading-loose">
+        <h2 class="text-2xl font-semibold text-[#efa31a]">💬 번역 명령어</h2>
+        <ul class="list-disc list-inside text-gray-200">
+          <li>
+            <code class="bg-gray-700 px-2 py-1 rounded">/activate-translation</code> -
+            채널에 자동 번역 기능을 활성화합니다.
+            번역 기능 활성화 시, 모든 메시지에 대해 자동으로 번역이 제공됩니다.
+          </li>
+          <li>
+            <code class="bg-gray-700 px-2 py-1 rounded">/deactivate-translation</code> -
+            채널의 자동 번역 기능을 비활성화합니다.
+          </li>
+        </ul>
+        <h2 class="text-2xl font-semibold text-[#efa31a]">⏰ 알람 명령어</h2>
+        <ul class="list-disc list-inside text-gray-200">
+          <li>
+            <code class="bg-gray-700 px-2 py-1 rounded">/list-alarm</code> -
+            채널에 등록된 알람 목록을 확인합니다.
+            각 알람에는 고유 ID가 부여되며, 해당 ID를 통해 수정 또는 삭제할 수 있습니다.
+          </li>
+          <li>
+            <code class="bg-gray-700 px-2 py-1 rounded">/alarm</code> - 특정 시간에 채널에 메시지를 전송하도록 알람을 설정합니다.
+            <details class="rounded-xs p-4">
+              <summary class="cursor-pointer text-gray-200">
+                명령어 사용법 및 옵션
+              </summary>
+              <div class="mt-2 text-sm text-gray-300 leading-relaxed">
+                <ul class="list-disc list-inside">
+                  <li><strong>date:</strong> yyyy-mm-dd 형식의 날짜 (필수)</li>
+                  <li><strong>time:</strong> hh:mm 형식의 시간 (필수)</li>
+                  <li><strong>target_user:</strong> 알람 대상 유저 (필수)</li>
+                  <li><strong>message:</strong> 전송할 메시지 (필수)</li>
+                  <li><strong>recurring_option:</strong> 반복 주기 선택 (선택)
+                    <ul class="ml-6 list-disc">
+                      <li>once - 한 번만</li>
+                      <li>hourly - 매시간</li>
+                      <li>daily - 매일</li>
+                      <li>weekly - 매주</li>
+                      <li>monthly - 매월</li>
+                      <li>yearly - 매년</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </li>
+          <li>
+            <code class="bg-gray-700 px-2 py-1 rounded">/delete-alarm</code> -
+            알람 ID를 기반으로 등록된 알람을 삭제합니다.
+            `/list-alarm` 명령으로 확인한 `alarm_id`를 입력하여 해당 알람을 제거할 수 있습니다.
+          </li>
+        </ul>
+        <h2 class="text-2xl font-semibold text-[#efa31a] pt-4">💬 FAQ</h2>
+        <p><strong>Q:</strong> 챗봇이 응답하지 않아요.<br />
+           <strong>A:</strong> 담당자를 호출해 주세요.</p>
+        <p><strong>Q:</strong> FAQ가 마음에 안들어요.<br />
+           <strong>A:</strong> 사실 쓰다가 갑자기 귀찮아졌어요.</p>
+      </div>
+
+      <footer class="text-gray-500 text-sm mt-10">
+        © 2025 JINDOS SEOUL Lacrosse Club
+      </footer>
+    </div>
+  </body>
+</html>
